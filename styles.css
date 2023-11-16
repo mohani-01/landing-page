@@ -135,7 +135,7 @@ body {
     
 }
 .text-image {
-    min-width: 300px !important;
+    min-width: 280px !important;
     width: 100% !important;
     max-width: 540px ;
     /* border: 2px solid blue; */
@@ -271,7 +271,7 @@ body {
 
 .footer {
     background-color: var(--bg-gray-light);
-    margin: 20rem 0 2rem 0;
+    margin: 20rem 0 0 0;
     /* border: 1px solid indianred; */
     position: relative;
     overflow-x: hidden;
@@ -425,6 +425,12 @@ body {
 
 
 @media (max-width: 767px ) {
+    .navbar {
+        padding: 0 0;
+    }
+    .top-container {
+        padding-bottom: 5rem !important;
+    }
     .text-container {
         padding: 0 0;
     }
@@ -519,11 +525,10 @@ body {
     }
     .text-plan {
         margin: auto;
-        
     }
 
     .more {
-        padding: 0 2rem !important;
+        /* padding: 0 2rem !important; */
         text-align: center;
     }
   
@@ -570,7 +575,8 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: stretch;
-        padding: 5rem 1rem 1rem 2rem ;
+        padding: 4rem 1rem 1rem 2rem ;
+        margin: 5rem 0;
     }
     .more-about-work {
         /* font-size: 30px; */
@@ -589,6 +595,10 @@ body {
 
     .social-media {
         width: 100%;
+    }
+    .footer {
+        margin-top: 2rem ;
+        margin-bottom: 0;
     }
 
     .footer-products {
