@@ -6,14 +6,6 @@
     --bg-gray-light: hsl(0, 0%, 98%);
 }
 
-html {
-    /* box-sizing: border-box; */
-}
-/* 
-*, *::before, *::after {
-    box-sizing: inherit;
-} */
-
 
 body {
     margin: 0;
@@ -191,9 +183,7 @@ body {
 
 
 
-.more {
-    /* border: 2px solid gray; */
-}
+
 
 .more-title {
     /* border: 2px solid black; */
@@ -520,9 +510,7 @@ body {
     .text-descripition {
         font-size: 1rem;
     }
-    .more-svg {
-        /* display: none; */
-    }
+    
     .more-title {
         font-size: 40px;
     }
