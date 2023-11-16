@@ -93,7 +93,7 @@ body {
     padding: 0 0 !important;
     color: var(--bg-gray-light);
     position: relative;
-    border: 2px solid brown;
+    /* border: 2px solid brown; */
     padding-bottom: 20rem !important;    
     height: auto    ;
 
@@ -112,7 +112,7 @@ body {
     background-color: var(--bg-violet-dark1);
 
     /* margin: 0 0 20rem 0;     */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 37rem;
     padding: 0 10%;
     
@@ -132,9 +132,16 @@ body {
 .text-text {
     padding: 3rem 3rem 0 10px ;
     font-family: 'Karla', sans-serif;
+    flex-shrink: 1.5;
     
 }
-
+.text-image {
+    min-width: 300px !important;
+    width: 100% !important;
+    max-width: 540px ;
+    /* border: 2px solid blue; */
+    flex-shrink: 1.4;
+}
 .mobile-left {
     display: none;
 }
@@ -173,12 +180,7 @@ body {
     
 }
 
-.text-image {
-    min-width: 300px !important;
-    width: 100% !important;
-    max-width: 540px ;
-    border: 2px solid blue;
-}
+
 
 .text-image  img {
     color: yellow;
@@ -237,9 +239,10 @@ body {
     overflow: hidden;
 }
 
-.more-svg {
+.more-svg img {
     position: absolute;
     right: 0;
+    top: 0;
 }
 
 .more-about-work {
@@ -272,28 +275,36 @@ body {
 .footer {
     background-color: var(--bg-gray-light);
     margin: 20rem 0 2rem 0;
-    border: 1px solid indianred;
+    /* border: 1px solid indianred; */
     position: relative;
+    overflow-x: hidden;
+
 }
 
-.footer-svg {
+.footer-svg img {
     position: absolute;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     left: 0;
+    top: 0;
 }
 
 .footer-social {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
     border-bottom: 2px solid var(--bg-violet-gray);
+    padding-bottom: 2rem ;
     margin: 2rem 0;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 200;
 }
 
 
 .social-media {
+    padding: 1.5rem 0;
     display: flex;
+    justify-content: center;
 }
 
 .media {
@@ -319,7 +330,7 @@ body {
     color: var(--bg-violet-dark2);
     font-family: 'Karla', sans-serif;
     font-weight: 700;
-    border: 2px solid gainsboro;
+    /* border: 2px solid gainsboro; */
     margin: 50px 0;
 }
 
@@ -349,7 +360,7 @@ body {
 
 @media (max-width: 1440px ) {
     .text-bold {
-        font-size: 79px;
+        font-size: 77px;
     }
     .text-text {
         padding: 2rem 1rem 0 1px;
@@ -365,8 +376,7 @@ body {
         padding: 0 5% ;
         height: 34rem;
     }
-
-    
+ 
    
 
 }
@@ -412,14 +422,15 @@ body {
     .more-about-work {
         font-size: 40px;
     }
-    .footer-svg > svg {
-        width: 100%;
-    }
+   
 }
 
 
 
 @media (max-width: 767px ) {
+    .text-container {
+        padding: 0 0;
+    }
     .header {
         display: none;
     }
@@ -447,6 +458,8 @@ body {
     }
     
     .text-bold {
+        position: relative;
+        z-index: 300;
         font-size: 50px;
     }
     
@@ -472,9 +485,7 @@ body {
         padding: 0 2rem !important;
         text-align: center;
     }
-    .more-title {
-        font-size: 40px;
-    }
+  
 
     .more-detail {
         grid-template-columns: auto;
@@ -494,24 +505,66 @@ body {
     .more-work {
         margin: 20px 18px;
     }
+
+    .footer-svg img {
+        content: url('images/bg-pattern-footer-mobile.svg');
+    }
   
 }
 
 @media (max-width: 600px ) {
+    .text-text {
+        padding: 2rem 1rem;
+    }
+
+    .text-descripition {
+        font-size: 1rem;
+    }
     .more-svg {
-        display: none;
+        /* display: none; */
+    }
+    .more-title {
+        font-size: 40px;
     }
     .more-about {
 
         flex-wrap: wrap;
         justify-content: center;
         align-items: stretch;
-        padding: 4rem 1rem 1rem 1rem ;
+        padding: 5rem 1rem 1rem 2rem ;
     }
     .more-about-work {
         /* font-size: 30px; */
-        /* padding: 1rem 1rem; */
+        padding: 3rem 1rem;
     }
-    
 
+    .more-svg img {
+        content:url('images/bg-pattern-how-we-work-mobile.svg') !important;
+    }
+
+    .icon {
+        width: 90vw;
+        text-align: center;
+        padding-top: 1.5rem;
+    }
+
+    .social-media {
+        width: 100%;
+    }
+
+    .footer-products {
+        grid-template-columns: auto;
+    }
+
+    .footer-info {
+        margin-top: 30px;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .text-bold {
+        font-size: 40px;
+    }
 }
